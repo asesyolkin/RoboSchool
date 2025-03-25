@@ -1,0 +1,77 @@
+.header {
+  background-color: #141024;
+}
+
+.header .container {
+  display: grid;
+  grid-template-columns: minmax(80px, 380px) 516px 811px minmax(80px, 1fr);
+  grid-template-rows: 75px 1fr;
+  height: 1080px;
+  max-width: 1920px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column: 1 / 5;
+  padding: 30px 100px 0;
+}
+
+.menu-container .school_name {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+  font-size: 20px;
+}
+
+.phone {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.description-container {
+  grid-column: 2 / 3;
+  margin-top: 266px;
+}
+
+.description-container .school_name {
+  margin-bottom: 20px;
+
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.description {
+  max-width: 478px;
+  margin-bottom: 50px;
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.sign-up-button {
+  width: 260px;
+  height: 79px;
+  background-color: var(--accent);
+  border-radius: 5px;
+}
+
+.student-container {
+  align-self: end;
+  margin-left: 28px;
+
+  text-align: center;
+
+  background-image: url('./../../img/header/circle.png');
+  background-repeat: no-repeat;
+  background-position: center 73%;
+}
