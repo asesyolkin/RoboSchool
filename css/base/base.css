@@ -5,6 +5,10 @@
   --font-accent: rgb(20 16 36 / 70%);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Jost*', sans-serif;
   color: #fff;
@@ -17,4 +21,10 @@ a {
 
 a:hover {
   color: #b0b0bf;
+}
+
+.container {
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
 }

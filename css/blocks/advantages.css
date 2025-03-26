@@ -1,0 +1,42 @@
+.advantages {
+  height: 614px;
+  padding: 120px 0;
+
+  line-height: 1.6;
+}
+
+.about {
+  max-width: 891px;
+
+  color: var(--font-base);
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.about b {
+  font-weight: 600;
+}
+
+.advantages-container {
+  display: flex;
+  column-gap: 40px;
+  margin-top: 60px;
+}
+
+.data-block {
+  display: flex;
+  flex-direction: column;
+  max-width: 260px;
+}
+
+.amount {
+  color: var(--accent);
+  font-size: 70px;
+  font-weight: 600;
+}
+
+.text {
+  color: var(--font-accent);
+  font-size: 18px;
+  font-weight: 400;
+}
