@@ -1,0 +1,30 @@
+.results {
+  height: 485px;
+  padding: 100px 0;
+
+  background-color: #F9F9F9;
+
+  color: var(--font-base);
+}
+
+.list-of-results {
+  display: flex;
+  column-gap: 40px;
+  margin-top: 60px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  width: 360px;
+}
+
+.results-title {
+  font-size: 24px;
+}
+
+.results-description {
+  font-size: 18px;
+  font-weight: 400;
+}
