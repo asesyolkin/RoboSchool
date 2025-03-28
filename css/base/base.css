@@ -11,7 +11,9 @@ html {
 
 body {
   font-family: 'Jost*', sans-serif;
+  font-weight: 600;
   color: #fff;
+  line-height: 1.6;
 }
 
 a {
@@ -27,4 +29,9 @@ a:hover {
   max-width: 1160px;
   width: 100%;
   margin: 0 auto;
+}
+
+.section-title {
+  font-size: 50px;
+  color: var(--font-base);
 }

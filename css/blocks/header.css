@@ -29,11 +29,11 @@
   gap: 40px;
 
   font-size: 20px;
+  font-weight: 400;
 }
 
 .phone {
   font-size: 30px;
-  font-weight: 600;
 }
 
 .description-container {
@@ -45,8 +45,6 @@
   margin-bottom: 20px;
 
   font-size: 70px;
-  font-weight: 600;
-  line-height: 1.6;
 }
 
 .description {
@@ -55,7 +53,6 @@
 
   font-size: 20px;
   font-weight: 400;
-  line-height: 1.6;
 }
 
 .sign-up-button {
