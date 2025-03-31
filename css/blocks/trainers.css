@@ -1,0 +1,49 @@
+.list-of-trainers {
+  display: flex;
+  column-gap: 40px;
+  margin-top: 60px;
+
+  overflow-x: overlay;
+}
+
+.card-of-trainer {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 360px;
+  flex-shrink: 0;
+}
+
+.card-of-trainer:hover {
+  cursor: pointer;
+}
+
+.trainers {
+  height: 1006px;
+  padding-top: 120px;
+}
+
+.name {
+  font-size: 24px;
+  color: var(--font-base);
+}
+
+.name, .detailing {
+  margin-top: 20px;
+}
+
+.profession, .detailing {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.profession {
+  margin-top: 10px;
+
+  color: var(--font-accent);
+}
+
+.detailing {
+  margin-bottom: 60px;
+
+  color: var(--accent);
+}
