@@ -1,0 +1,69 @@
+.packages {
+  padding: 120px 0;
+  color: var(--font-base);
+}
+
+.section-title {
+  margin-bottom: 60px;
+}
+
+.list-of-packages {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  height: 500px;
+}
+
+.package {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 360px;
+  height: 460px;
+  padding: 40px;
+
+  cursor: pointer;
+
+  box-shadow: inset 0 0 0 1px rgb(20 16 36 / 20%);
+  border-radius: 20px;
+
+  transition: all 0.1s ease;
+}
+
+.package:hover {
+  color: #fff;
+  background-color: var(--font-base);
+  height: 500px;
+}
+
+.package-title {
+  font-size: 30px;
+}
+
+.price {
+  margin-top: 63px;
+  margin-bottom: 20px;
+
+  font-size: 50px;
+}
+
+.package-description {
+  height: 100%;
+
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.bid-button {
+  width: 280px;
+  height: 79px;
+  flex-shrink: 0;
+
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+
+  background-color: var(--accent);
+  border-radius: 5px;
+}
