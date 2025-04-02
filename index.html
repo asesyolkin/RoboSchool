@@ -136,6 +136,23 @@
         </div>
       </div>
     </section>
+    <section class="promo">
+      <div class="container">
+        <div class="details">
+          <h2 class="title">Запишитесь на курс со скидкой 10%</h2>
+          <span class="info">Акция действительна до 10 марта 2022 года</span>
+        </div>
+        <form action="#!" method="get" class="form">
+          <input id="name" type="text" class="input" placeholder="Имя" required>
+          <input id="tel" type="tel" class="input" placeholder="Телефон" required>
+          <input id="email" type="email" class="input" placeholder="E-mail" required>
+          <button class="submit-button">Оформить заявку</button>
+        </form>
+      </div>
+    </section>
   </main>
 </body>
+<script>
+  document.querySelector('.form').addEventListener('click', e => e.preventDefault(), false);
+</script>
 </html>
