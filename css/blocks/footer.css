@@ -1,0 +1,32 @@
+.footer {
+  height: 159px;
+
+  background-color: var(--font-base);
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1920px;
+  padding: 40px 100px 0;
+}
+
+.footer .school-name {
+  flex-basis: 50%;
+  margin-bottom: 5px;
+
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.footer .phone {
+  flex-basis: 50%;
+
+  text-align: end;
+}
+
+.copyrights {
+  font-size: 16px;
+  font-weight: 400;
+}
