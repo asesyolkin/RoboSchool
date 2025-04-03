@@ -32,6 +32,10 @@
   font-weight: 400;
 }
 
+.menu > a:hover {
+  color: #b0b0bf;
+}
+
 .phone {
   font-size: 30px;
 }
@@ -56,8 +60,15 @@
 }
 
 .sign-up-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 260px;
   height: 79px;
+
+  font-size: 18px;
+  font-weight: 400;
+
   background-color: var(--accent);
   border-radius: 5px;
 }

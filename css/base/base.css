@@ -21,10 +21,6 @@ a {
   transition: color 0.2s ease;
 }
 
-a:hover {
-  color: #b0b0bf;
-}
-
 .container {
   max-width: 1160px;
   width: 100%;

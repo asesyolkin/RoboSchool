@@ -23,7 +23,7 @@
       <div class="description-container">
         <div class="school_name">ROBO SCHOOL</div>
         <h1 class="description">Курсы повышения квалификации по робототехнике для педагогов начальной школы</h1>
-        <button class="sign-up-button">Записаться на курс</button>
+        <a href="#promo" class="sign-up-button">Записаться на курс</a>
       </div>
       <div class="student-container">
         <img src="./img/header/female_student.webp" alt="student's photo">
@@ -115,28 +115,28 @@
       <div class="container">
         <h2 class="section-title">Выберите нужный пакет</h2>
         <div class="list-of-packages">
-          <div class="package">
+          <a href="#promo" class="package">
             <span class="package-title">– PRO –</span>
             <span class="price">20.000 ₽</span>
             <span class="package-description">УМК по робототехнике и программированию</span>
             <button class="bid-button">Оставить заявку</button>
-          </div>
-          <div class="package">
+          </a>
+          <a href="#promo" class="package">
             <span class="package-title">– ROBO –</span>
             <span class="price">15.000 ₽</span>
             <span class="package-description">УМК по робототехнике</span>
             <button class="bid-button">Оставить заявку</button>
-          </div>
-          <div class="package">
+          </a>
+          <a href="#promo" class="package">
             <span class="package-title">– PROG –</span>
             <span class="price">10.000 ₽</span>
             <span class="package-description">УМК по программированию</span>
             <button class="bid-button">Оставить заявку</button>
-          </div>
+          </a>
         </div>
       </div>
     </section>
-    <section class="promo">
+    <section id="promo" class="promo">
       <div class="container">
         <div class="details">
           <h2 class="title">Запишитесь на курс со скидкой 10%</h2>
@@ -160,6 +160,16 @@
   </footer>
 </body>
 <script>
+  // Disabling page reloading after clicking on the form button
   document.querySelector('.form').addEventListener('click', e => e.preventDefault(), false);
+
+  // Autofocus on the "Name" input field
+  const inputName = document.getElementById('name');
+  const clickSources = Array.prototype.slice.call(document.querySelectorAll('.package'));
+  clickSources.push(document.querySelector('.sign-up-button'));
+
+  clickSources.forEach(elem => {
+    elem.onclick = () => setTimeout(() => inputName.focus(), 0); // Added the setTimeout parameter so that focus is triggered after the window.scroll event completes.
+  }, false)
 </script>
 </html>
