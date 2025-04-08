@@ -24,6 +24,39 @@
   font-size: 24px;
 }
 
+.info-badge {
+  display: inline-block;
+  width: 24px;
+  border-radius: 50%;
+
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: super;
+
+  background-color: rgba(20, 16, 36, 0.080);
+}
+
+.info-popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+  width: 251px;
+  height: 56px;
+  padding: 15px 20px;
+
+  border-radius: 5px;
+
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+
+  background-color: #fff;
+  box-shadow: 0 2px 8px 0 rgba(20, 16, 36, 0.1);
+}
+
 .results-description {
   font-size: 18px;
   font-weight: 400;
