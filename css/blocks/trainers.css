@@ -1,25 +1,43 @@
-.list-of-trainers {
-  display: flex;
-  column-gap: 40px;
-  margin-top: 60px;
-
-  overflow-x: overlay;
+:root {
+  --swiper-scrollbar-bottom: 0;
+  --swiper-scrollbar-sides-offset: 34.347%;
+  --swiper-scrollbar-size: 5px;
+  --swiper-scrollbar-bg-color: rgba(20, 16, 36, 0.080);
+  --swiper-scrollbar-drag-bg-color: var(--font-base);
 }
 
-.card-of-trainer {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 360px;
-  flex-shrink: 0;
+.swiper-scrollbar {
+  left: 0 !important; 
 }
 
-.card-of-trainer:hover {
-  cursor: pointer;
+.swiper-scrollbar,
+.swiper-button-prev,
+.swiper-button-next {
+  position: relative !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  left: 0 !important;
+  right: 0 !important;
+  margin-top: 0 !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: '' !important;
 }
 
 .trainers {
   height: 1006px;
   padding-top: 120px;
+}
+
+.card-of-trainer {
+  display: flex !important;
+  flex-direction: column;
+  flex-basis: 360px;
+  flex-shrink: 0;
 }
 
 .name {
@@ -46,4 +64,36 @@
   margin-bottom: 60px;
 
   color: var(--accent);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+  padding-right: 10px;
+}
+
+.card-of-trainer,
+.scrollbar:hover {
+  cursor: pointer;
+}
+
+.button-prev, .button-next {
+  width: 34px !important;
+  height: 34px !important;
+  margin: 3px;
+
+  border-radius: 50%;
+
+  background-color: #fff;
+  background-image: url('./../../img/trainers/arrow_left.png');
+}
+
+.button-prev {
+  margin-left: auto;
+}
+
+.button-next {
+  transform: rotate(180deg);
 }

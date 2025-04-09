@@ -5,9 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ROBO SCHOOL</title>
   <link rel="stylesheet" href="./css/main.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
   <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
   <script type="module" src="./scripts/popover.js"></script>
+  <script type="module" src="./scripts/slider.js"></script>
 </head>
 <body>
   <header class="header">
@@ -82,37 +87,44 @@
     <section id="trainers" class="trainers">
       <div class="container">
         <h2 class="section-title">Профессиональные тренеры</h2>
-        <div class="list-of-trainers">
-          <div class="card-of-trainer">
-            <img src="./img/trainers/trainer_laym.webp" alt="Фото Ирины Лайм" class="photo">
-            <span class="name">Ирина Лайм</span>
-            <span class="profession">преподаватель по робототехнике</span>
-            <span class="detailing">Подробнее</span>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="card-of-trainer swiper-slide">
+              <img src="./img/trainers/trainer_laym.webp" alt="Фото Ирины Лайм" class="photo">
+              <span class="name">Ирина Лайм</span>
+              <span class="profession">преподаватель по робототехнике</span>
+              <span class="detailing">Подробнее</span>
+            </div>
+            <div class="card-of-trainer swiper-slide">
+              <img src="./img/trainers/trainer_orlova.webp" alt="Фото Марины Орловой" class="photo">
+              <span class="name">Марина Орлова</span>
+              <span class="profession">преподаватель по робототехнике</span>
+              <span class="detailing">Подробнее</span>
+            </div>
+            <div class="card-of-trainer swiper-slide">
+              <img src="./img/trainers/trainer_petrov.webp" alt="Фото Максима Петрова" class="photo">
+              <span class="name">Максим Петров</span>
+              <span class="profession">преподаватель по программированию</span>
+              <span class="detailing">Подробнее</span>
+            </div>
+            <div class="card-of-trainer swiper-slide">
+              <img src="./img/trainers/trainer_nazarov.webp" alt="Фото Константина Назарова" class="photo">
+              <span class="name">Константин Назаров</span>
+              <span class="profession">преподаватель по робототехнике</span>
+              <span class="detailing">Подробнее</span>
+            </div>
+            <div class="card-of-trainer swiper-slide">
+              <img src="./img/trainers/trainer_vesenyaya.webp" alt="Фото Лизы Весенней" class="photo">
+              <span class="name">Лиза Весенняя</span>
+              <span class="profession">преподаватель по программированию</span>
+              <span class="detailing">Подробнее</span>
+            </div>
           </div>
-          <div class="card-of-trainer">
-            <img src="./img/trainers/trainer_orlova.webp" alt="Фото Марины Орловой" class="photo">
-            <span class="name">Марина Орлова</span>
-            <span class="profession">преподаватель по робототехнике</span>
-            <span class="detailing">Подробнее</span>
-          </div>
-          <div class="card-of-trainer">
-            <img src="./img/trainers/trainer_petrov.webp" alt="Фото Максима Петрова" class="photo">
-            <span class="name">Максим Петров</span>
-            <span class="profession">преподаватель по программированию</span>
-            <span class="detailing">Подробнее</span>
-          </div>
-          <div class="card-of-trainer">
-            <img src="./img/trainers/trainer_nazarov.webp" alt="Фото Константина Назарова" class="photo">
-            <span class="name">Константин Назаров</span>
-            <span class="profession">преподаватель по робототехнике</span>
-            <span class="detailing">Подробнее</span>
-          </div>
-          <div class="card-of-trainer">
-            <img src="./img/trainers/trainer_vesenyaya.webp" alt="Фото Лизы Весенней" class="photo">
-            <span class="name">Лиза Весенняя</span>
-            <span class="profession">преподаватель по программированию</span>
-            <span class="detailing">Подробнее</span>
-          </div>
+        </div>
+        <div class="controls">
+          <div class="scrollbar swiper-scrollbar"></div>
+          <div class="button-prev swiper-button-prev"></div>
+          <div class="button-next swiper-button-next"></div>
         </div>
       </div>
     </section>
