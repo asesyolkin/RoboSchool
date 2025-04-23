@@ -16,7 +16,7 @@ body {
   line-height: 1.6;
 }
 
-a {
+a, button {
   color: inherit;
   transition: color 0.2s ease;
 }
@@ -30,4 +30,16 @@ a {
 .section-title {
   font-size: 50px;
   color: var(--font-base);
+}
+
+.name {
+  font-size: 24px;
+  color: var(--font-base);
+}
+
+.profession, .detailing, .close-button {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--font-accent);
+  line-height: 1.6;
 }

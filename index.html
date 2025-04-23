@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ROBO SCHOOL</title>
   <link rel="stylesheet" href="./css/main.css">
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
   <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
   <script type="module" src="./scripts/popover.js"></script>
   <script type="module" src="./scripts/slider.js"></script>
+  <script type="module" src="./scripts/modal.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 </head>
 <body>
   <header class="header">
@@ -89,7 +92,7 @@
         <h2 class="section-title">Профессиональные тренеры</h2>
         <div class="swiper">
           <div class="swiper-wrapper">
-            <div class="card-of-trainer swiper-slide">
+            <div class="card-of-trainer swiper-slide" data-trainer-id="1">
               <div class="photo">
                 <img src="./img/trainers/trainer_laym.webp" alt="Фото Ирины Лайм">
               </div>
@@ -97,7 +100,7 @@
               <span class="profession">преподаватель по робототехнике</span>
               <span class="detailing">Подробнее</span>
             </div>
-            <div class="card-of-trainer swiper-slide">
+            <div class="card-of-trainer swiper-slide" data-trainer-id="2">
               <div class="photo">
                 <img src="./img/trainers/trainer_orlova.webp" alt="Фото Марины Орловой">
               </div>
@@ -105,7 +108,7 @@
               <span class="profession">преподаватель по робототехнике</span>
               <span class="detailing">Подробнее</span>
             </div>
-            <div class="card-of-trainer swiper-slide">
+            <div class="card-of-trainer swiper-slide" data-trainer-id="3">
               <div class="photo">
                 <img src="./img/trainers/trainer_petrov.webp" alt="Фото Максима Петрова">
               </div>
@@ -113,7 +116,7 @@
               <span class="profession">преподаватель по программированию</span>
               <span class="detailing">Подробнее</span>
             </div>
-            <div class="card-of-trainer swiper-slide">
+            <div class="card-of-trainer swiper-slide" data-trainer-id="4">
               <div class="photo">
                 <img src="./img/trainers/trainer_nazarov.webp" alt="Фото Константина Назарова">
               </div>
@@ -121,7 +124,7 @@
               <span class="profession">преподаватель по робототехнике</span>
               <span class="detailing">Подробнее</span>
             </div>
-            <div class="card-of-trainer swiper-slide">
+            <div class="card-of-trainer swiper-slide" data-trainer-id="5">
               <div class="photo">
                 <img src="./img/trainers/trainer_vesenyaya.webp" alt="Фото Лизы Весенней">
               </div>
@@ -185,6 +188,52 @@
       <span class="copyrights">© ROBO.SCHOOL</span>
     </div>
   </footer>
+  <div class="modal hidden">
+    <div class="modal-container">
+      <div class="modal-header">
+        <img src="/" alt="!#" class="photo">
+        <span class="name"></span>
+        <span class="profession"></span>
+        <ul class="social">
+          <li><a href="#!"><img src="./img/social/facebook.svg" alt="Иконка соц. сети Facebook"></a></li>
+          <li><a href="#!"><img src="./img/social/instagram.svg" alt="Иконка соц. сети Instagram"></a></li>
+        </ul>
+        <button class="close-button">Закрыть</button>
+      </div>
+      <ul class="tabs">
+        <li class="">
+          <button class="tab-button" data-tab-button-id="0">
+            Образование
+          </button>
+        </li>
+        <li class="">
+          <button class="tab-button" data-tab-button-id="1">
+            Опыт работы
+          </button>
+        </li>
+        <li class="">
+          <button class="tab-button" data-tab-button-id="2">
+            Награды
+          </button>
+        </li>
+      </ul>
+      <div
+        class="tab-content"
+        data-tab-content-id="0"
+        data-tab-content-name="education"
+      ></div>
+      <div 
+        class="tab-content"
+        data-tab-content-id="1"
+        data-tab-content-name="experience"
+      ></div>
+      <div
+        class="tab-content"
+        data-tab-content-id="2"
+        data-tab-content-name="awards"
+      ></div>
+    </div>
+  </div>
 </body>
 <script>
   // Disabling page reloading after clicking on the form button

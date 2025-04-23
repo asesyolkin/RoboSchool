@@ -72,24 +72,13 @@
 }
 
 
-.name {
-  font-size: 24px;
-  color: var(--font-base);
-}
-
-.name, .detailing {
+.card-of-trainer .name, 
+.card-of-trainer .detailing {
   margin-top: 20px;
 }
 
-.profession, .detailing {
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.profession {
+.card-of-trainer .profession {
   margin-top: 10px;
-
-  color: var(--font-accent);
 }
 
 .detailing {
