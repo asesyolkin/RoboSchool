@@ -22,12 +22,21 @@
     <div class="container">
       <div class="menu-container">
         <span class="school_name">ROBO.SCHOOL</span>
-        <nav class="menu">
+        <nav id="menu" class="menu">
+          <img 
+            src="./img/header/mobile/icon_close.png" 
+            alt="Иконка закрытия мобильного меню" 
+            class="mobile-menu-icon-close"
+            onclick="mobileMenuHandler()">
           <a href="#advantages">О школе</a>
           <a href="#trainers">Тренеры</a>
           <a href="#packages">Стоимость</a>
         </nav>
         <span class="phone">+7 800 000 11 22</span>
+        <div class="mobile-icons-container">
+          <img src="./img/header/mobile/icon_phone.png" alt="Иконка номера телефона школы">
+          <img src="./img/header/mobile/icon_menu.png" alt="Иконка открытия мобильного меню" onclick="mobileMenuHandler()">
+        </div>
       </div>
       <div class="description-container">
         <div class="school_name">ROBO SCHOOL</div>
@@ -236,6 +245,22 @@
   </div>
 </body>
 <script>
+  // Menu click handlers
+  const menuElem = document.getElementById('menu');
+
+  function mobileMenuHandler() {
+    menuElem.classList.toggle('active');
+  }
+
+  document.body.addEventListener('click', event => {
+    if ((event.target.closest('.menu') === null && event.target.closest('.mobile-icons-container') === null)
+        ||
+        event.target.closest('.menu a')) 
+    {
+      menuElem.classList.remove('active');
+    }
+  })
+
   // Disabling page reloading after clicking on the form button
   document.querySelector('.form').addEventListener('click', e => e.preventDefault(), false);
 
