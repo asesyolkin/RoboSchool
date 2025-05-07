@@ -1,5 +1,5 @@
 .advantages {
-  height: 614px;
+  min-height: 614px;
   padding: 120px 0;
 }
 
@@ -17,7 +17,10 @@
 
 .advantages-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   column-gap: 40px;
+  row-gap: 30px;
   margin-top: 60px;
 }
 
@@ -36,4 +39,36 @@
   color: var(--font-accent);
   font-size: 18px;
   font-weight: 400;
+}
+
+@media (max-width: 1280px) {
+  .advantages {
+    padding: clamp(3.75rem, 2.5rem + 6.25vw, 7.5rem) 0; /* https://min-max-calculator.9elements.com/?60,120,320,1280 */
+  }
+  
+  .about {
+    margin: 0 auto;
+    
+    font-size: clamp(1.25rem, 1.042rem + 1.04vw, 1.875rem); /* https://min-max-calculator.9elements.com/?20,30,320,1280 */
+  }
+
+  .advantages-container {
+    margin-top: clamp(2.5rem, 2.083rem + 2.08vw, 3.75rem); /* https://min-max-calculator.9elements.com/?40,60,320,1280 */
+  }
+  
+  .data-block {
+    align-items: center;
+  }
+
+  .amount {
+    font-size: clamp(3.75rem, 3.542rem + 1.04vw, 4.375rem); /* https://min-max-calculator.9elements.com/?60,70,320,1280 */
+  }
+
+  .text {
+    font-size: clamp(1rem, 0.958rem + 0.21vw, 1.125rem); /* https://min-max-calculator.9elements.com/?16,18,320,1280 */
+  }
+  
+  .about, .text {
+    text-align: center;
+  }
 }
