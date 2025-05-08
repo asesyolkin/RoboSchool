@@ -28,6 +28,8 @@ a, button {
 }
 
 .section-title {
+  margin-bottom: 60px;
+
   font-size: 50px;
   color: var(--font-base);
 }
@@ -47,5 +49,12 @@ a, button {
 @media (max-width: 1280px) {
   .container {
     padding: 0 10px;
+  }
+
+  .section-title {
+    margin-bottom: clamp(2.5rem, 2.083rem + 2.08vw, 3.75rem); /* https://min-max-calculator.9elements.com/?40,60,320,1280 */
+
+    font-size: clamp(1.875rem, 1.458rem + 2.08vw, 3.125rem); /* https://min-max-calculator.9elements.com/?30,50,320,1280 */
+    line-height: clamp(2.625rem, 1.833rem + 3.96vw, 5rem); /* https://min-max-calculator.9elements.com/?42,80,320,1280 (1.4-1.6) */
   }
 }
