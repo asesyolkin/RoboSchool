@@ -56,5 +56,6 @@ a, button {
 
     font-size: clamp(1.875rem, 1.458rem + 2.08vw, 3.125rem); /* https://min-max-calculator.9elements.com/?30,50,320,1280 */
     line-height: clamp(2.625rem, 1.833rem + 3.96vw, 5rem); /* https://min-max-calculator.9elements.com/?42,80,320,1280 (1.4-1.6) */
+    text-align: center;
   }
 }

@@ -29,14 +29,12 @@
 }
 
 .trainers {
-  height: 886px;
   margin-top: 120px;
 }
 
 .card-of-trainer {
   display: flex !important;
   flex-direction: column;
-  flex-basis: 360px;
   flex-shrink: 0;
 }
 
@@ -47,8 +45,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-
-  border-radius: 0 0 15px 15px;
   
   transition: box-shadow 0.3s;
 
@@ -57,6 +53,10 @@
 
 .card-of-trainer:hover:before {
   box-shadow: inset 0 0 35px 10px rgba(20, 16, 36, 0.080);
+}
+
+.card-of-trainer:before, .photo {
+  border-radius: 20px;
 }
 
 .photo {
@@ -118,4 +118,57 @@
 
 .button-next {
   transform: rotate(180deg);
+}
+
+@media (max-width: 1280px) {
+  .trainers {
+    margin-top: clamp(3.75rem, 2.5rem + 6.25vw, 7.5rem); /* https://min-max-calculator.9elements.com/?60,120,320,1280 */
+  }
+
+  .card-of-trainer .name {
+    font-size: clamp(1.25rem, 1.167rem + 0.42vw, 1.5rem); /* https://min-max-calculator.9elements.com/?20,24,320,1280 */
+  }
+  
+  .card-of-trainer .profession {
+    font-size: clamp(0.875rem, 0.792rem + 0.42vw, 1.125rem); /* https://min-max-calculator.9elements.com/?14,18,320,1280 */
+  }
+
+  .card-of-trainer .detailing {
+    font-size: clamp(1rem, 0.958rem + 0.21vw, 1.125rem); /* https://min-max-calculator.9elements.com/?16,18,320,1280 */
+  }
+
+  .controls {
+    margin-top: clamp(0.625rem, 3.13vw, 2.5rem); /* https://min-max-calculator.9elements.com/?10,40,320,1280 */
+  }
+}
+
+@media (max-width: 959px) {
+  :root {
+    --swiper-scrollbar-sides-offset: 28%;
+  }
+
+  .container {
+    max-width: 770px;
+  }
+}
+
+@media (max-width: 479px) {
+  :root {
+    --swiper-scrollbar-sides-offset: 0%;
+  }
+
+  .swiper {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .controls {
+    height: 37px;
+    padding-right: 0;
+  }
+
+  .swiper-button-prev.button-prev, 
+  .swiper-button-next.button-next {
+    display: none;
+  }
 }
