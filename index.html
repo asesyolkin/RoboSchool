@@ -209,23 +209,29 @@
         </ul>
         <button class="close-button">Закрыть</button>
       </div>
-      <ul class="tabs">
-        <li class="">
-          <button class="tab-button" data-tab-button-id="0">
-            Образование
-          </button>
-        </li>
-        <li class="">
-          <button class="tab-button" data-tab-button-id="1">
-            Опыт работы
-          </button>
-        </li>
-        <li class="">
-          <button class="tab-button" data-tab-button-id="2">
-            Награды
-          </button>
-        </li>
-      </ul>
+      <div class="tabs-container">
+        <button class="mobile-tab-button" data-active-tab-button-id="">
+          <span></span>
+          <img src="./img/modal/mobile/arrow.png" alt="Иконка стрелки" class="arrow">
+        </button>
+        <ul class="tabs">
+          <li>
+            <button class="tab-button" data-tab-button-id="0">
+              Образование
+            </button>
+          </li>
+          <li>
+            <button class="tab-button" data-tab-button-id="1">
+              Опыт работы
+            </button>
+          </li>
+          <li>
+            <button class="tab-button" data-tab-button-id="2">
+              Награды
+            </button>
+          </li>
+        </ul>
+      </div>
       <div
         class="tab-content"
         data-tab-content-id="0"

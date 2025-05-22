@@ -1,17 +1,19 @@
 :root {
   --modal-transition-delay: 0.3s;
   --modal-transition-delay-timeFunc: var(--modal-transition-delay) ease;
+  --tab-border: 1px solid rgba(20, 16, 36, 0.11);
 }
 
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
 
   background-color: rgb(20 16 36 / 10%);
 
@@ -23,7 +25,7 @@
 .modal-container {
   max-width: 940px;
   flex-basis: 100%;
-  height: 768px;
+  margin: 40px;
   padding: 40px;
 
   border-radius: 20px;
@@ -48,8 +50,9 @@
 
 .modal-header {
   display: grid;
-  grid-template: 38px 29px 1fr / 160px 1fr 64px;
+  grid-template: repeat(2, min-content) 1fr / 160px 1fr 64px;
   gap: 10px 40px;
+  padding-bottom: 40px;
 }
 
 .modal-header .photo {
@@ -73,7 +76,6 @@
 }
 
 .close-button {
-  align-self: center;
   height: 29px;
 }
 
@@ -81,20 +83,31 @@
   color: var(--font-base);
 }
 
+.tabs-container {
+  position: relative;
+
+  border-bottom: var(--tab-border);
+}
+
+.mobile-tab-button {
+  display: none;
+}
+
 .tabs {
   display: flex;
-  border-bottom: 1px solid rgba(20, 16, 36, 0.11);
-  padding: 40px 0 20px;
+  padding-bottom: 20px;
 }
 
 .tabs li {
   flex-grow: 1;
 }
 
-.tabs li,
+.tab-button,
+.mobile-tab-button,
 .tab-content {
   font-size: 20px;
   font-weight: 400;
+  line-height: 1.6;
 }
 
 .tab-button:hover {
@@ -173,4 +186,162 @@
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+
+/* Styles for the mobile version */
+
+@media (max-width: 660px) {
+  .modal-container {
+    margin: 40px clamp(0.625rem, -1.14rem + 8.82vw, 2.5rem); /* https://min-max-calculator.9elements.com/?10,40,320,660 */
+    padding: clamp(1.25rem, 0.074rem + 5.88vw, 2.5rem); /* https://min-max-calculator.9elements.com/?20,40,320,660 */
+    padding-top: clamp(0.625rem, 0.037rem + 2.94vw, 1.25rem); /* https://min-max-calculator.9elements.com/?10,20,320,660 */
+    padding-right: clamp(0.625rem, 0.037rem + 2.94vw, 1.25rem); /* https://min-max-calculator.9elements.com/?10,20,320,660 */
+  }
+
+  .modal-header {
+    grid-template: min-content repeat(2, min-content) 1fr 
+      / 
+      clamp(3.75rem, -2.132rem + 29.41vw, 10rem) /* https://min-max-calculator.9elements.com/?60,160,320,660 */
+      1fr 
+      clamp(0.813rem, -0.188rem + 5vw, 1.875rem); /* https://min-max-calculator.9elements.com/?13,30,320,660 */
+    gap: 
+      clamp(0.313rem, 0.018rem + 1.47vw, 0.625rem) /* https://min-max-calculator.9elements.com/?5,10,320,660 */
+      clamp(0.625rem, -1.14rem + 8.82vw, 2.5rem); /* https://min-max-calculator.9elements.com/?10,40,320,660 */
+    padding-bottom: clamp(1.25rem, 0.662rem + 2.94vw, 1.875rem); /* https://min-max-calculator.9elements.com/?20,30,320,660 */
+
+    position: relative;
+
+    background-color: #fff;
+    
+    z-index: 1002;
+  }
+
+  .modal-header .photo {
+    grid-row: 2 / 5;
+
+    border-radius: clamp(0.313rem, -0.57rem + 4.41vw, 1.25rem); /* https://min-max-calculator.9elements.com/?5,20,320,660 */
+  }
+
+  .modal-header .name {
+    grid-row: 2 / 3;
+
+    font-size: clamp(1rem, 0.529rem + 2.35vw, 1.5rem); /* https://min-max-calculator.9elements.com/?16,24,320,660 */
+  }
+
+  .profession {
+    grid-row: 3 / 4;
+
+    font-size: clamp(0.75rem, 0.397rem + 1.76vw, 1.125rem); /* https://min-max-calculator.9elements.com/?12,18,320,660 */
+  }
+
+  .social {
+    grid-row: 4 / 5;
+    gap: 5px;
+  }
+
+  .close-button {
+    grid-column: 3 / 4;
+    height: clamp(0.813rem, -0.188rem + 5vw, 1.875rem); /* https://min-max-calculator.9elements.com/?13,30,320,660 */
+
+    background-image: url('./../../img/modal/mobile/cross.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: clamp(0.813rem, -0.188rem + 5vw, 1.875rem); /* https://min-max-calculator.9elements.com/?13,30,320,660 */;
+  }
+
+  .tabs-container {
+    border-bottom: none;
+
+    font-size: clamp(1rem, 0.765rem + 1.18vw, 1.25rem); /* https://min-max-calculator.9elements.com/?16,20,320,660 */
+  }
+
+  .mobile-tab-button {
+    display: flex;
+    width: 96%;
+    height: 46px;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    color: #fff;
+
+    background-color: var(--accent);
+
+    z-index: 1002;
+  }
+
+  .arrow {
+    width: 7px;
+    margin-left: 7.5px;
+
+    transition: transform 0.2s ease;
+  }
+
+  .arrow.show-tabs {
+    transform: rotate(180deg);
+  }
+
+  .mobile-tab-button,
+  .tab-button {
+    font-size: clamp(1rem, 0.765rem + 1.18vw, 1.25rem); /* https://min-max-calculator.9elements.com/?16,20,320,660 */
+  }
+
+  .tabs {
+    display: flex;
+    width: 96%;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 0px;
+
+    position: absolute;
+    bottom: 0px;
+
+    transition: bottom 0.2s ease;
+  }
+
+  .tabs li {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .tab-button {
+    height: 46px;
+    width: 100%;
+
+    position: relative;
+
+    border: var(--tab-border);
+    border-top: none;
+    
+    background-color: #fff;
+    
+    z-index: 1001;
+  }
+
+  .tab-button.active,
+  .tab-button.empty {
+    display: none;
+  }
+
+
+  .tab-content {
+    height: clamp(16.438rem, 11.085rem + 26.76vw, 22.125rem); /* https://min-max-calculator.9elements.com/?263,354,320,660 */
+    padding-right: clamp(0.625rem, -1.14rem + 8.82vw, 2.5rem); /* https://min-max-calculator.9elements.com/?10,40,320,660 */
+
+    font-size: clamp(0.875rem, 0.522rem + 1.76vw, 1.25rem); /* https://min-max-calculator.9elements.com/?14,20,320,660 */
+  }
+
+  .courses-title {
+    margin-top: clamp(1.25rem, 0.074rem + 5.88vw, 2.5rem); /* https://min-max-calculator.9elements.com/?20,40,320,660 */
+    margin-bottom: clamp(0.625rem, 0.037rem + 2.94vw, 1.25rem); /* https://min-max-calculator.9elements.com/?10,20,320,660 */
+
+    font-size: clamp(1rem, 0.529rem + 2.35vw, 1.5rem); /* https://min-max-calculator.9elements.com/?16,24,320,660 */
+  }
+
+  .modal .simplebar-scrollbar::before,
+  .modal .simplebar-track.simplebar-vertical {
+    width: clamp(0.188rem, 0.07rem + 0.59vw, 0.313rem); /* https://min-max-calculator.9elements.com/?3,5,320,660 */
+  }
 }
