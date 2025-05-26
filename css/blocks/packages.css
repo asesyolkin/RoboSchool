@@ -3,14 +3,16 @@
   color: var(--font-base);
 }
 
-.section-title {
-  margin-bottom: 60px;
-}
-
 .list-of-packages {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   column-gap: 40px;
+}
+
+.package-container {
+  display: flex;
+  align-items: center;
   height: 500px;
 }
 
@@ -19,40 +21,51 @@
   flex-direction: column;
   align-items: center;
   width: 360px;
-  height: 460px;
   padding: 40px;
 
   cursor: pointer;
 
   box-shadow: inset 0 0 0 1px rgb(20 16 36 / 20%);
   border-radius: 20px;
+}
 
+.package,
+.package-title,
+.package-description {
   transition: all 0.2s ease;
 }
 
 .package:hover {
   color: #fff;
   background-color: var(--font-base);
-  height: 500px;
 }
 
 .package-title {
+  height: 111px;
+  
   font-size: 30px;
 }
 
+.package:hover .package-title {
+  height: 131px;
+}
+
 .price {
-  margin-top: 63px;
   margin-bottom: 20px;
 
   font-size: 50px;
 }
 
 .package-description {
-  height: 100%;
-
+  height: 90px;
+  
   font-size: 18px;
   font-weight: 400;
   text-align: center;
+}
+
+.package:hover .package-description {
+  height: 110px;
 }
 
 .bid-button {
@@ -66,4 +79,50 @@
 
   background-color: var(--accent);
   border-radius: 5px;
+}
+
+@media (max-width: 1280px) {
+  .packages {
+    padding: clamp(3.75rem, 2.5rem + 6.25vw, 7.5rem) 0px; /* https://min-max-calculator.9elements.com/?60,120,320,1280 */
+  }
+
+  .list-of-packages {
+    justify-content: center;
+    row-gap: clamp(0.25rem, 0.125rem + 0.63vw, 0.625rem); /* https://min-max-calculator.9elements.com/?4,10,320,1280 */
+  }
+
+  .package-container {
+    height: clamp(26.25rem, 24.583rem + 8.33vw, 31.25rem); /* https://min-max-calculator.9elements.com/?420,500,320,1280 */
+  }
+
+  .package {
+    width: clamp(18.75rem, 17.5rem + 6.25vw, 22.5rem); /* https://min-max-calculator.9elements.com/?300,360,320,1280 */
+    padding: 40px clamp(1.25rem, 0.833rem + 2.08vw, 2.5rem); /* https://min-max-calculator.9elements.com/?20,40,320,1280 */
+  }
+
+  .package-title {
+    height: clamp(5.5rem, 5.021rem + 2.4vw, 6.938rem); /* https://min-max-calculator.9elements.com/?88,111,320,1280 */
+  }
+
+  .package:hover .package-title {
+    height: clamp(5.5rem, 4.604rem + 4.48vw, 8.188rem); /* https://min-max-calculator.9elements.com/?88,131,320,1280 */
+  }
+
+  .package-description {
+    height: clamp(4.125rem, 3.583rem + 2.71vw, 5.75rem); /* https://min-max-calculator.9elements.com/?66,92,320,1280 */
+  }
+
+  .package:hover .package-description {
+    height: clamp(5.75rem, 5.375rem + 1.88vw, 6.875rem); /* https://min-max-calculator.9elements.com/?92,110,320,1280 */
+  }
+
+  .bid-button {
+    width: clamp(16.25rem, 15.833rem + 2.08vw, 17.5rem); /* https://min-max-calculator.9elements.com/?260,280,320,1280 */
+    height: clamp(3.75rem, 3.354rem + 1.98vw, 4.938rem); /* https://min-max-calculator.9elements.com/?60,79,320,1280 */
+  }
+
+  .package-description,
+  .bid-button {
+    font-size: clamp(1rem, 0.958rem + 0.21vw, 1.125rem); /* https://min-max-calculator.9elements.com/?16,18,320,1280 */
+  }
 }
