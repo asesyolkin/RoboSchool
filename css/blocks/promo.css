@@ -1,5 +1,4 @@
 .promo {
-  height: 460px;
   padding: 87px 0;
 
   line-height: 1.3;
@@ -12,19 +11,23 @@
 
 .promo .container {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   column-gap: 64px;
+  row-gap: 40px;
   padding: 0 60px;
 }
 
 .details {
-  width: 476px;
+  max-width: 476px;
   flex-shrink: 0;
 }
 
 .title {
-  font-size: 36px;
   margin-top: 19px;
   margin-bottom: 20px;
+
+  font-size: 36px;
 }
 
 .info {
@@ -32,8 +35,12 @@
   font-weight: 400;
 }
 
+.form {
+  max-width: 500px;
+}
+
 .input, .submit-button {
-  width: 500px;
+  width: 100%;
   height: 64px;
   padding: 0 20px;
 
@@ -53,4 +60,41 @@
 
 .submit-button {
   background-color: var(--font-base);
+}
+
+@media (max-width: 1280px) {
+  .promo {
+    padding: clamp(2.5rem, 1.521rem + 4.9vw, 5.438rem) 0; /* https://min-max-calculator.9elements.com/?40,87,320,1280 */
+  }
+
+  .promo .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 clamp(0.625rem, -0.417rem + 5.21vw, 3.75rem); /* https://min-max-calculator.9elements.com/?10,60,320,1280 */
+  }
+
+  .details {
+    text-align: center;
+  }
+
+  .title {
+    margin-top: 0px;
+    margin-bottom: clamp(0.625rem, 0.417rem + 1.04vw, 1.25rem); /* https://min-max-calculator.9elements.com/?10,20,320,1280 */
+
+    font-size: clamp(1.875rem, 1.75rem + 0.63vw, 2.25rem); /* https://min-max-calculator.9elements.com/?30,36,320,1280 */
+    line-height: 1.4;
+  }
+
+  .info {
+    font-size: clamp(1rem, 0.917rem + 0.42vw, 1.25rem); /* https://min-max-calculator.9elements.com/?16,20,320,1280 */
+    line-height: 1.6;
+  }
+
+  .input, .submit-button {
+    height: clamp(3.75rem, 3.667rem + 0.42vw, 4rem); /* https://min-max-calculator.9elements.com/?60,64,320,1280 */
+  }
+
+  .submit-button {
+    font-size: clamp(1rem, 0.958rem + 0.21vw, 1.125rem); /* https://min-max-calculator.9elements.com/?16,18,320,1280 */
+  }
 }
