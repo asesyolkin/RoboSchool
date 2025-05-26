@@ -1,6 +1,4 @@
 .footer {
-  height: 159px;
-
   background-color: var(--font-base);
 }
 
@@ -9,7 +7,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 1920px;
-  padding: 40px 100px 0;
+  padding: 40px 100px;
 }
 
 .footer .school-name {
@@ -29,4 +27,40 @@
 .copyrights {
   font-size: 16px;
   font-weight: 400;
+  color: rgb(255 255 255 / 70%);
+}
+
+@media (max-width: 1280px) {
+  .footer .container {
+    /* padding on the side corresponds to this in ".header .menu-container", plus, 10px */
+    padding: 40px clamp(1.538rem, -1.106rem + 9.2vw, 6.25rem); /* https://min-max-calculator.9elements.com/?24_6,100,460,1280,  */
+  }
+
+  .footer .school-name {
+    font-size: clamp(1.125rem, 0.875rem + 1.25vw, 1.875rem); /* https://min-max-calculator.9elements.com/?18,30,320,1280 */
+  }
+
+  .footer .phone {
+    font-size: clamp(1rem, 0.708rem + 1.46vw, 1.875rem); /* https://min-max-calculator.9elements.com/?16,30,320,1280 */
+  }
+
+  .copyrights {
+    font-size: clamp(0.875rem, 0.833rem + 0.21vw, 1rem); /* https://min-max-calculator.9elements.com/?14,16,320,1280 */
+  }
+}
+
+@media (max-width: 459px) {
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 20px;
+  }
+
+  .footer .school-name {
+    margin-bottom: 20px;
+  }
+  
+  .footer .phone {
+    margin-bottom: 40px;
+  }
 }
