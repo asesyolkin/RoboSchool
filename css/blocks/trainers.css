@@ -2,7 +2,7 @@
   --swiper-scrollbar-bottom: 0;
   --swiper-scrollbar-sides-offset: 34.347%;
   --swiper-scrollbar-size: 5px;
-  --swiper-scrollbar-bg-color: rgba(20, 16, 36, 0.080);
+  --swiper-scrollbar-bg-color: var(--background-accent);
   --swiper-scrollbar-drag-bg-color: var(--font-base);
 }
 
@@ -52,7 +52,7 @@
 }
 
 .card-of-trainer:hover:before {
-  box-shadow: inset 0 0 35px 10px rgba(20, 16, 36, 0.080);
+  box-shadow: inset 0 0 35px 10px var(--background-accent);
 }
 
 .card-of-trainer:before, .photo {

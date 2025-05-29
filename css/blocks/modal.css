@@ -160,7 +160,7 @@
 }
 
 .modal .simplebar-track.simplebar-vertical {
-  background-color: rgba(20, 16, 36, 0.080);
+  background-color: var(--background-accent);
 }
 
 .modal .simplebar-scrollbar::before,

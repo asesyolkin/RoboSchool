@@ -44,7 +44,7 @@
   text-align: center;
   vertical-align: super;
 
-  background-color: rgba(20, 16, 36, 0.080);
+  background-color: var(--background-accent);
 }
 
 .info-popover {
