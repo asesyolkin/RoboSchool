@@ -36,7 +36,7 @@
 }
 
 .package:hover {
-  color: #fff;
+  color: var(--base-white);
   background-color: var(--font-base);
 }
 
@@ -75,7 +75,7 @@
 
   font-size: 18px;
   font-weight: 400;
-  color: #fff;
+  color: var(--base-white);
 
   background-color: var(--accent);
   border-radius: 5px;

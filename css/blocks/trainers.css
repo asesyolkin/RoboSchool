@@ -108,7 +108,7 @@
 
   border-radius: 50%;
 
-  background-color: #fff;
+  background-color: var(--base-white);
   background-image: url('./../../img/trainers/arrow_left.svg');
 }
 

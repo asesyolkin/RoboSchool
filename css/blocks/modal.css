@@ -32,7 +32,7 @@
   
   color: var(--font-base);
 
-  background-color: #fff;
+  background-color: var(--base-white);
 }
 
 .hidden {
@@ -211,7 +211,7 @@
 
     position: relative;
 
-    background-color: #fff;
+    background-color: var(--base-white);
     
     z-index: 1002;
   }
@@ -264,7 +264,7 @@
 
     position: relative;
 
-    color: #fff;
+    color: var(--base-white);
 
     background-color: var(--accent);
 
@@ -315,7 +315,7 @@
     border: var(--tab-border);
     border-top: none;
     
-    background-color: #fff;
+    background-color: var(--base-white);
     
     z-index: 1001;
   }

@@ -1,5 +1,6 @@
 :root {
   --accent: #D52027;
+  --base-white: #fff;
 
   --font-base: #141024;
   --font-accent: rgb(20 16 36 / 70%);
@@ -13,7 +14,7 @@ html {
 body {
   font-family: 'Jost*', sans-serif;
   font-weight: 600;
-  color: #fff;
+  color: var(--base-white);
   line-height: 1.6;
 }
 
