@@ -147,8 +147,8 @@
     --swiper-scrollbar-sides-offset: 28%;
   }
 
-  .container {
-    max-width: 770px;
+  .trainers .container {
+    max-width: 626px;
   }
 }
 
@@ -157,9 +157,8 @@
     --swiper-scrollbar-sides-offset: 0%;
   }
 
-  .swiper {
-    max-width: 360px;
-    margin: 0 auto;
+  .card-of-trainer.swiper-slide {
+    max-width: 220px;
   }
 
   .controls {

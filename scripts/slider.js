@@ -10,7 +10,7 @@ if (clientWidth - 320 < 960) {
 }
 
 if (clientWidth - 480 < 480) { // resolution between  480px and 959px
-  dragSize = (clientWidth - 480) / 480 * 120 + 140;
+  dragSize = (clientWidth - 480) / 480 * 70 + 140;
 } else if (clientWidth - 960 < 320) { // resolution between  960px and 1279px
   dragSize = (clientWidth - 960) / 320 * 50 + 210;
 } else if (clientWidth >= 1280) {
@@ -19,7 +19,8 @@ if (clientWidth - 480 < 480) { // resolution between  480px and 959px
 
 
 new Swiper(".swiper", {
-  slidesPerView: 1,
+  slidesPerView: 'auto',
+  freeMode: true,
   spaceBetween,
   navigation: {
     nextEl: '.swiper-button-next',
