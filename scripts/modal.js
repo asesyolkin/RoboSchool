@@ -29,7 +29,7 @@ function modalOpen(event) {
 }
 
 function createTrainerContent(trainerId) {
-  trainerImg.src = document.location.origin + dataTrainers[trainerId].img_src;
+  trainerImg.src = `.${dataTrainers[trainerId].img_src}`;
   trainerImg.alt = dataTrainers[trainerId].img_alt;
   trainerName.innerHTML = dataTrainers[trainerId].full_name;
   trainerProfession.innerHTML = dataTrainers[trainerId].profession;
@@ -39,7 +39,7 @@ function modalClose(event) {
   if (event.target == modal || event.target == modalCloseButton) {
     modal.classList.add('hidden');
 
-    if (isMobileModal) closeTabList();
+    if (isMobileModal && tabListOpen) closeTabList();
   }
 };
 
@@ -57,7 +57,7 @@ const tabButtons = modal.querySelectorAll('[data-tab-button-id]'),
 let activeTabId = 0;
 
 // variables for the mobile version
-let tabList, tabIdBuffer, transitionInProcess, numberOfActiveTabs, mobileTabButton, heightOfmobileTabButton, arrow;
+let tabList, tabListOpen, tabIdBuffer, transitionInProcess, numberOfActiveTabs, mobileTabButton, heightOfmobileTabButton, arrow;
 
 function tabHandler(tabId) {
   hideTabContent(activeTabId);
@@ -104,19 +104,10 @@ function showTabContent(tabId) {
 function mobileTabButtonHandler() {
   if (transitionInProcess) return;
 
-  if (tabList.style.bottom === '') {
-    tabList.style.bottom = `-${heightOfmobileTabButton * numberOfActiveTabs}px`;
-  } else {
-    tabList.style.bottom = '';
-  }
-
-  rotateArrow();
+  if (tabList.style.bottom === '') openTabList();
+  else closeTabList();
 
   transitionInProcess = true;
-}
-
-function rotateArrow() {
-  arrow.classList.toggle('show-tabs');
 }
 
 function tabListHandler() {
@@ -136,7 +127,6 @@ function mobileTabHandler(tabId) {
   hideTabContent(activeTabId);
   showTabContent(tabId);
   closeTabList();
-  rotateArrow();
   tabIdBuffer = tabId;
   transitionInProcess = true;
 }
@@ -145,8 +135,16 @@ function createMobileTabButtonName(tabId) {
   mobileTabButton.children[0].textContent = tabButtons[tabId].textContent;
 }
 
+function openTabList() {
+  tabList.style.bottom = `-${heightOfmobileTabButton * numberOfActiveTabs}px`;
+  arrow.classList.add('show-tabs');
+  tabListOpen = true;
+}
+
 function closeTabList() {
   tabList.style.bottom = '';
+  arrow.classList.remove('show-tabs');
+  tabListOpen = false;
 }
 
 if (isMobileModal) {
@@ -154,6 +152,7 @@ if (isMobileModal) {
   transitionInProcess = false;
   numberOfActiveTabs = 0;
   tabList = modal.querySelector('.tabs'),
+  tabListOpen = false;
   mobileTabButton = modal.querySelector('.mobile-tab-button'),
   heightOfmobileTabButton = mobileTabButton.getClientRects()[0].height,
   arrow = mobileTabButton.querySelector('.arrow');
