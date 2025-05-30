@@ -79,10 +79,6 @@
   height: 29px;
 }
 
-.close-button:hover {
-  color: var(--font-base);
-}
-
 .tabs-container {
   position: relative;
 
@@ -110,12 +106,6 @@
   line-height: 1.6;
 }
 
-.tab-button:hover {
-  cursor: pointer;
-  
-  color: #b0b0bf;
-}
-
 .tab-button.active {
   color: var(--accent);
 }
@@ -124,10 +114,6 @@
   pointer-events: none;
   
   color: rgba(20, 16, 36, 0.20);
-}
-
-.tab-button.empty:hover {
-  cursor: auto;
 }
 
 .tab-content {
@@ -172,8 +158,24 @@
   pointer-events: all !important;
 }
 
-.simplebar-hover {
-  cursor: pointer;
+@media (hover: hover) and (pointer: fine) {
+  .close-button:hover {
+    color: var(--font-base);
+  }
+
+  .tab-button:hover {
+    cursor: pointer;
+    
+    color: #b0b0bf;
+  }
+
+  .tab-button.empty:hover {
+    cursor: auto;
+  }
+
+  .simplebar-hover {
+    cursor: pointer;
+  }
 }
 
 /* Fade in tabs */
@@ -324,7 +326,6 @@
   .tab-button.empty {
     display: none;
   }
-
 
   .tab-content {
     height: clamp(16.438rem, 11.085rem + 26.76vw, 22.125rem); /* https://min-max-calculator.9elements.com/?263,354,320,660 */

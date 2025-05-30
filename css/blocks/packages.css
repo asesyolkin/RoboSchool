@@ -35,19 +35,10 @@
   transition: all 0.2s ease;
 }
 
-.package:hover {
-  color: var(--base-white);
-  background-color: var(--font-base);
-}
-
 .package-title {
   height: 111px;
   
   font-size: 30px;
-}
-
-.package:hover .package-title {
-  height: 131px;
 }
 
 .price {
@@ -64,10 +55,6 @@
   text-align: center;
 }
 
-.package:hover .package-description {
-  height: 110px;
-}
-
 .bid-button {
   width: 280px;
   height: 79px;
@@ -79,6 +66,21 @@
 
   background-color: var(--accent);
   border-radius: 5px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .package:hover {
+    color: var(--base-white);
+    background-color: var(--font-base);
+  }
+
+  .package:hover .package-title {
+    height: 131px;
+  }
+
+  .package:hover .package-description {
+    height: 110px;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -104,16 +106,8 @@
     height: clamp(5.5rem, 5.021rem + 2.4vw, 6.938rem); /* https://min-max-calculator.9elements.com/?88,111,320,1280 */
   }
 
-  .package:hover .package-title {
-    height: clamp(5.5rem, 4.604rem + 4.48vw, 8.188rem); /* https://min-max-calculator.9elements.com/?88,131,320,1280 */
-  }
-
   .package-description {
     height: clamp(4.125rem, 3.583rem + 2.71vw, 5.75rem); /* https://min-max-calculator.9elements.com/?66,92,320,1280 */
-  }
-
-  .package:hover .package-description {
-    height: clamp(5.75rem, 5.375rem + 1.88vw, 6.875rem); /* https://min-max-calculator.9elements.com/?92,110,320,1280 */
   }
 
   .bid-button {
@@ -124,5 +118,15 @@
   .package-description,
   .bid-button {
     font-size: clamp(1rem, 0.958rem + 0.21vw, 1.125rem); /* https://min-max-calculator.9elements.com/?16,18,320,1280 */
+  }
+}
+
+@media (max-width: 1280px) and (hover: hover) and (pointer: fine) {
+  .package:hover .package-title {
+    height: clamp(5.5rem, 4.604rem + 4.48vw, 8.188rem); /* https://min-max-calculator.9elements.com/?88,131,320,1280 */
+  }
+
+  .package:hover .package-description {
+    height: clamp(5.75rem, 5.375rem + 1.88vw, 6.875rem); /* https://min-max-calculator.9elements.com/?92,110,320,1280 */
   }
 }

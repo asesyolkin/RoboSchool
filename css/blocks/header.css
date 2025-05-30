@@ -35,10 +35,6 @@
   font-weight: 400;
 }
 
-.menu > a:hover {
-  color: #b0b0bf;
-}
-
 .mobile-menu-icon-close {
   display: none;
 }
@@ -98,6 +94,12 @@
   margin-top: clamp(3.5rem, -4.632rem + 8.24vw, 5.25rem); /* https://min-max-calculator.9elements.com/?56,84,1580,1920 */
 
   text-align: left;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .menu > a:hover {
+    color: #b0b0bf;
+  }
 }
 
 @media (max-width: 1280px) {
